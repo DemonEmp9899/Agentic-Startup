@@ -5,6 +5,7 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.pyc
 *.env
 *.venv
 env/
@@ -36,3 +37,9 @@ yarn.lock
 *.ntvs*
 *.njsproj
 *.sln
+
+# -----------------
+# Secrets / Sensitive
+# -----------------
+*_hf_agent.py
+opw.txt

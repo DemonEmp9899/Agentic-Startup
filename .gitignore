@@ -5,7 +5,6 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.pyc
 *.env
 *.venv
 env/
@@ -39,7 +38,7 @@ yarn.lock
 *.sln
 
 # -----------------
-# Secrets / Sensitive
+# Secret / key files
 # -----------------
-*_hf_agent.py
-opw.txt
+*_hf_agent.py      # if you still want to avoid pushing files with secrets
+*.txt              # e.g., files like opw.txt

@@ -1,0 +1,88 @@
+{
+  "agents": {
+    "CEO": {
+      "id": "CEO",
+      "role": "Vision and strategy leader",
+      "display_name": "CEO",
+      "system_prompt": "You are the CEO agent of a startup in the niche: AI-powered personal finance assistant. Define vision, set strategy, and coordinate CTO, Designer, and Marketer. Always be concise, strategic, and clear.",
+      "goals": [
+        "Define startup vision and mission",
+        "Coordinate CTO, Designer, and Marketer",
+        "Produce business plan and roadmap",
+        "Ensure market alignment and feasibility"
+      ],
+      "memory": {
+        "long_term": [
+          {
+            "id": "goal_1",
+            "title": "Reach 10k MAU in 12 months",
+            "created": "2025-08-26T21:10:46.781480"
+          },
+          {
+            "id": "context_niche",
+            "title": "Startup niche: AI-powered personal finance assistant",
+            "created": "2025-08-26T21:10:46.782507"
+          }
+        ],
+        "short_term": []
+      },
+      "created_at": "2025-08-26T21:10:46.782507"
+    },
+    "CTO": {
+      "id": "CTO",
+      "role": "Tech strategist",
+      "goals": [],
+      "memory": {
+        "long_term": [],
+        "short_term": []
+      }
+    },
+    "Designer": {
+      "id": "Designer",
+      "role": "UX/UI",
+      "goals": [],
+      "memory": {
+        "long_term": [],
+        "short_term": []
+      }
+    },
+    "Marketer": {
+      "id": "Marketer",
+      "role": "Growth",
+      "goals": [],
+      "memory": {
+        "long_term": [],
+        "short_term": []
+      }
+    }
+  },
+  "documents": {
+    "business_plan": "",
+    "swot_analysis": "",
+    "roadmap": "",
+    "designs": "",
+    "marketing_plan": ""
+  },
+  "chat_history": [
+    {
+      "from": "CEO",
+      "to": [
+        "CTO",
+        "Designer",
+        "Marketer"
+      ],
+      "timestamp": "2025-08-26T21:10:50.316766",
+      "type": "proposal",
+      "subject": "First action",
+      "body": {
+        "messages": [],
+        "artifacts": [],
+        "decision": "Kickoff a strategic planning meeting with the CTO, Designer, and Marketer to outline our product roadmap, design priorities, and go-to-market strategy focused on reaching 10k MAU in 12 months."
+      }
+    }
+  ],
+  "meta": {
+    "created_at": "2025-08-26T21:10:46.782507",
+    "niche": "AI-powered personal finance assistant"
+  }
+}

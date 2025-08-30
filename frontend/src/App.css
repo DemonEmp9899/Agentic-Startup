@@ -1,0 +1,181 @@
+/* frontend/src/App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Body with animated gradient background */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #e9d5ff, #fbcfe8, #fef3c7, #d8b4fe);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+  /* Remove display: flex; and align-items/justify-content */
+}
+
+/* Make the app-container scrollable if needed */
+.app-container {
+  position: relative;
+  z-index: 10; /* stay above floating shapes */
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+
+  /* Allow scrolling inside the container if it grows */
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
+/* Floating gradient circles */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  background: radial-gradient(circle, #7c3aed, #f472b6);
+  animation: float 20s linear infinite;
+  pointer-events: none;
+}
+
+/* Different sizes and positions */
+.shape.shape1 { width: 150px; height: 150px; top: 10%; left: 20%; animation-duration: 25s; }
+.shape.shape2 { width: 100px; height: 100px; top: 70%; left: 80%; animation-duration: 30s; }
+.shape.shape3 { width: 200px; height: 200px; top: 40%; left: 50%; animation-duration: 35s; }
+.shape.shape4 { width: 120px; height: 120px; top: 80%; left: 10%; animation-duration: 28s; }
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  50% { transform: translateY(-50px) translateX(30px) rotate(180deg); }
+  100% { transform: translateY(0px) translateX(0px) rotate(360deg); }
+}
+
+/* Container with glassmorphism */
+
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #6b21a8;
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+  margin-top: 6px;
+  resize: vertical;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 8px rgba(124,58,237,0.4);
+}
+
+/* Input number */
+input[type="number"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  width: 100px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 8px rgba(124,58,237,0.4);
+}
+
+/* Buttons */
+button {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #5b21b6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Conversation section */
+.conversation {
+  margin-top: 40px;
+}
+
+.conversation h2 {
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+/* Message bubbles */
+.message {
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  background-color: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.message:hover {
+  transform: translateY(-2px);
+}
+
+.message .from-to {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b21a8;
+  margin-bottom: 6px;
+}
+
+.message pre {
+  margin: 0;
+  font-size: 14px;
+  color: #1f2937;
+  white-space: pre-wrap;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}

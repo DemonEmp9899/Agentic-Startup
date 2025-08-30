@@ -1,4 +1,4 @@
-🌟 Agentic Startup Project: AI-Powered Startup Team Simulation
+### 🌟 Agentic Startup Project: AI-Powered Startup Team Simulation ###
 Simulate a fully autonomous startup with CEO, CTO, Designer, and Marketer agents, all working together to generate business strategies, tech solutions, designs, and marketing campaigns.
 
 ---

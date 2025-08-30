@@ -1,0 +1,38 @@
+# -----------------
+# Python (Backend)
+# -----------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+*.sqlite3
+*.log
+*.egg-info/
+dist/
+build/
+
+# -----------------
+# Node/React (Frontend)
+# -----------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.env
+.DS_Store
+
+# -----------------
+# VSCode / IDE
+# -----------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
